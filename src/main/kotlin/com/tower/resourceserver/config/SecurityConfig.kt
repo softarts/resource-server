@@ -19,7 +19,6 @@ class SecurityConfig {
     private var keycloakJwtTokenConverter: KeycloakJwtTokenConverter? =
         KeycloakJwtTokenConverter(JwtGrantedAuthoritiesConverter())
 
-
     @Bean
     @Throws(Exception::class)
     fun myServerFilterChain(http: HttpSecurity): SecurityFilterChain {

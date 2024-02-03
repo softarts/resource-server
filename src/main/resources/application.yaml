@@ -8,72 +8,12 @@ server:
 spring:
   main.banner-mode: "off"
   profiles.active: ${PROFILES_ACTIVE:message-debug-logging}
-#  datasource:
-#      url: ${POSTGRES_DB:jdbc:postgresql://localhost:5432/template-service}
-#      username: ${POSTGRES_USER:postgres}
-#      password: ${POSTGRES_USER_PASSWORD:postgres}
-
-
-
-#  security:
-#    oauth2:
-#      client:
-#        provider:
-#          keycloak:
-#            issuer-uri: http://localhost:8080/auth/realms/SpringBootKeycloak
-#            user-name-attribute: preferred_username
-#
-#        registration:
-#          keycloak:
-#            client-id: login-app
-#            authorization-grant-type: authorization_code
-#            scope: openid
-
-
-
 
   security:
     oauth2:
       resourceserver:
         jwt:
           issuer-uri: http://localhost:8080/auth/realms/SpringBootKeycloak
-
-
-
-
-#spring.jpa:
-#  show_sql: true
-#  open-in-view: false # TODO
-#  generate-ddl: false
-#  properties.hibernate.temp.use_jdbc_metadata_defaults: false
-#  database-platform: org.hibernate.dialect.PostgreSQLDialect
-#  #hibernate.ddl-auto: validate
-#  hibernate.ddl-auto: create-drop
-
-#    pool:
-#      enabled: false
-
-
-
-# kafka setting
-#tower:
-#  messaging:
-#    auth: ${KAFKA_AUTH:false}
-#    username: ${KAFKA_USER:}
-#    password: ${KAFKA_PASSWORD:}
-#    transaction-id-prefix: demo-transaction-
-#    ssl: ${KAFKA_SSL:false}
-#    schema.registry.url: ${SCHEMA_REGISTRY_URL:http://localhost:8081}
-#    boostrap-servers: ${KAFKA_CONNECTION:localhost:9092}
-#    producer-max-age: 7d
-#
-#    event:
-#      testcommand1:
-#        topic: kafka-demo.testcommand1.event
-#        consumer-group-id: kafka-demo
-#        listener-count: 1
-
-
 
 
 
